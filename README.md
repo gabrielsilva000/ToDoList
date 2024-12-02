@@ -29,12 +29,12 @@ Este projeto é uma aplicação **Angular + .NET** que implementa um sistema de 
 - **Frontend (Angular 19.0.2)**:
   - Componentes para login e CRUD.
   - Serviço para autenticação e requisições HTTP.
-  - Caminho ToDoList/To-Do-List
+  - Caminho ToDoList/To-Do-List.App
 
 - **Backend (ASP.NET Core 8.01)**:
   - Endpoints RESTful para as operações CRUD.
   - Endpoint de login que retorna o token JWT.
-  - Caminho ToDoList/To-Do-List.App
+  - Caminho ToDoList/To-Do-List
 
 ---
 
