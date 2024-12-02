@@ -1,0 +1,44 @@
+<div>
+  <div colspan="2" class="border-0">
+    <h6 class="titulo-modal">Cadastrar novo usuário!</h6>
+  </div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="submit()" #formDit="ngForm">
+  <div>
+    <label for="username" class="form-label">Username</label>
+    <input
+      id="username"
+      type="text"
+      formControlName="username"
+      class="form-control"
+      placeholder="Insira seu username!"
+      required />
+  </div>
+  <div>
+    <label for="password" class="form-label">Password</label>
+    <input
+      id="password"
+      type="text"
+      formControlName="password"
+      class="form-control"
+      placeholder="Insira sua senha!"
+      required />
+  </div>
+
+  <div class="d-flex justify-content-end mt-3">
+    <button
+      class="btn btn-primary me-2"
+      type="submit"
+      [disabled]="!form.valid">
+      Cadastrar!
+    </button>
+    <button
+      class="btn btn-secondary"
+      type="button"
+      routerLink="/">
+      Sair
+    </button>
+  </div>
+
+</form>

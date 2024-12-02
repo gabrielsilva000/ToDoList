@@ -1,0 +1,41 @@
+<div class="outer">
+  <div class="container">
+    <div class="row div-container">
+      <div class="offset-md-2 col-lg-5 col-md-7 offset-leg-4 offset-md-3 box-form">
+        <div class="panel border bg-white">
+          <div class="panel-heading">
+            <div class="panel-body p-3">
+              <form [formGroup]="form" (ngSubmit)="login()">
+                <div class="form-group pt-3">
+                  <div class="input-field">
+                    <input type="text" name="username" placeholder="usuário" formControlName="username">
+                  </div>
+                  <div *ngIf="f.username.errors && f.username.touched" class="invalid-feedback d-flex position-absolute m-0">
+                    <ng-container [ngSwitch]="true">
+                      <div *ngSwitchCase="f.username.hasError('required')">por favor informe um usuário</div>
+                    </ng-container>
+                  </div>
+                </div>
+                <div class="form-group pt-3">
+                  <div class="input-field">
+                    <input type="password" name="password" placeholder="senha" formControlName="password">
+                  </div>
+                  <div *ngIf="f.password.errors && f.password.touched" class="invalid-feedback d-flex position-absolute m-0">
+                    <ng-container [ngSwitch]="true">
+                      <div *ngSwitchCase="f.password.hasError('required')">por favor informe uma senha</div>
+                    </ng-container>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-4 w-100">Login</button>
+                <button type="button" class="btn btn-primary btn-block mt-4 w-100" routerLink="/register">Register</button>
+              </form>
+            </div>
+            <div>
+                <span class="invalid-feedback d-block">{{authError}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
